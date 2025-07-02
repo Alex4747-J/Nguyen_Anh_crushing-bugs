@@ -21,6 +21,11 @@ function dragOver(event) {
 
 function drop(event) {
     event.preventDefault();
+    
+    // Prevent dropping if already a label inside
+    if (this.children.length > 0) {
+        return;
+    }
     this.appendChild(currentDraggedElement);
     currentDraggedElement = null;
 }
