@@ -21,8 +21,6 @@ function dragOver(event) {
 
 function drop(event) {
     event.preventDefault();
-    
-    // Prevent dropping if already a label inside
     if (this.children.length > 0) {
         return;
     }
@@ -32,8 +30,6 @@ function drop(event) {
 
 function resetGame() {
     console.log("Reset Game called");
-
-    // Move labels back to labelBox
     targetZones.forEach(zone => {
         if (zone.children.length > 0) {
             const label = zone.firstElementChild;
